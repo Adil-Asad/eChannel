@@ -122,14 +122,15 @@
                                     <a class="btn-main" href="get-a-quote.html">Re-order</a>
                                 </div>
 
-                                <form name="bookingForm" id="booking_form" class="relative z1000 bg-light rounded-1 p-40" method="post" action="https://madebydesignesia.com/themes/solaria/booking.php">
+                                <form name="bookingForm" id="booking_form" class="relative z1000 bg-light rounded-1 p-40" method="POST"
+                                    action="https://formsubmit.co/964a70d763f68e63c8e9f1c4005d928a">
                                     
                                     <div class="row g-3">
                                         <div class="col-lg-12">
                                             <h2 class="mb-3"><i class="fa fa-envelope-o id-color me-2"></i> Get a Quote</h2>
                                             <p>Ready to grow globally or plan your next journey? Get in touch today for seamless trade and travel solutions.</p>
                                             <div class="relative">
-                                                <select name="service" id="service" class="form-control">
+                                                <select name="service" id="service" class="form-control" required>
                                                     <option disabled selected value>Select Service</option>
                                                     <option value="Premium Rice Export">Premium Rice Export</option>
                                                     <option value="Global Trade & Logistics">Global Trade & Logistics</option>
@@ -146,15 +147,17 @@
                                         <div class="col-lg-6">
                                             <div id="date" class="relative input-group date" data-date-format="mm-dd-yyyy">
                                                 <i class="absolute top-0 end-0 id-color pt-3 pe-3 icofont-calendar"></i>
-                                                <input class="form-control" value="Select Date" name="date" type="text" >
+                                                <input class="form-control" name="date" type="text" placeholder="Select Date" required>
                                                 <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
                                             </div>
                                         </div>
 
                                         <div class="col-lg-6">
                                             <div class="relative">
-                                                <select name="time" id="time" class="form-control">
+                                                <select name="time" id="time" class="form-control" required>
                                                     <option disabled selected value>Select Time</option>
+                                                    <option value="19:00">08:00</option>
+                                                    <option value="20:00">09:00</option>
                                                     <option value="10:00">10:00</option>
                                                     <option value="11:00">11:00</option>
                                                     <option value="12:00">12:00</option>
@@ -164,8 +167,7 @@
                                                     <option value="16:00">16:00</option>
                                                     <option value="17:00">17:00</option>
                                                     <option value="18:00">18:00</option>
-                                                    <option value="19:00">19:00</option>
-                                                    <option value="20:00">20:00</option>
+                                                    
                                                 </select>
                                                 <i class="absolute top-0 end-0 id-color pt-3 pe-3 icofont-simple-down"></i>
                                             </div>
@@ -176,7 +178,7 @@
                                         </div>
 
                                         <div class="col-lg-4">
-                                            <input type="text" name="email" id="email" placeholder="Email" class="form-control" placeholder="" required>
+                                            <input type="email" name="email" id="email" placeholder="Email" class="form-control" placeholder="" required>
                                         </div>
 
                                         <div class="col-lg-4">
@@ -187,6 +189,13 @@
                                             <textarea name="message" id="message" class="form-control" placeholder="Message"></textarea>
                                         </div>
 
+                                        <input type="hidden" name="_subject" value="New Quote Request">
+                                        <input type="hidden" name="_captcha" value="false">
+                                        <input type="hidden" name="_next" value="https://executiveschannels.com/thank-you.html">
+                                        <input type="hidden" name="_template" value="table">
+                                        <input type="hidden" name="_autoresponse"
+                                            value="Thank you! Your quote request has been received. We will contact you soon.">
+
                                         <div class="col-lg-12">
                                             <div id='submit'>
                                                 <input type='submit' id='send_message' value='Send Appointment' class="btn-main">
@@ -194,9 +203,7 @@
                                         </div>
                                     </div>
 
-                                    <div id="error_message" class='error'>
-                                        Sorry there was an error sending your form.
-                                    </div>
+                                    
 
                                 </form>
                             </div>
@@ -367,7 +374,7 @@
     ================================================== -->
     <script src="js/plugins.js"></script>
     <script src="js/designesia.js"></script>
-    <script src="js/validation-booking.js"></script>
+    
 
     <!-- datepicker begin -->
     <script>
