@@ -3534,7 +3534,38 @@ a.btn-main.btn-with-arrow:hover{
   color: #ffffff !important;
   z-index: 10000000000000;
 }
+.footer-bg-image {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
 
+.footer-bg-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.3;
+  /* adjust visibility */
+}
+
+footer.section-dark {
+  position: relative;
+}
+
+footer.section-dark::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(2, 0, 36, 0.63);
+  /* adjust darkness here */
+  z-index: 1;
+}
+
+footer.section-dark .container {
+  position: relative;
+  z-index: 2;
+}
 
 /* ------------------------------ */
 
